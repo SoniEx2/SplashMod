@@ -1,0 +1,16 @@
+[
+{
+  "modid": "splash",
+  "name": "Splash",
+  "description": "Adds random splash messages to the startup logs.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SoniEx2"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
