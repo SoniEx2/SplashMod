@@ -18,7 +18,7 @@ import java.util.Random;
 /**
  * @author soniex2
  */
-@Mod(modid = "splash", name = "Splash", version = "1.0.0")
+@Mod(modid = "splash", name = "Splash", version = "0.1.0")
 public class Splash {
     private static final Random rand = new Random();
 
