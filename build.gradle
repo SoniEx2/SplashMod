@@ -19,7 +19,7 @@ apply plugin: 'forge'
 
 idea { module { inheritOutputDirs = true } }
 
-version = "0.1.0"
+version = "0.1.1"
 group = "com.github.soniex2.splash" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "splash"
 

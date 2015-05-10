@@ -14,13 +14,17 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author soniex2
  */
-@Mod(modid = "splash", name = "Splash", version = "0.1.0")
+@Mod(modid = "splash", name = "Splash", version = "0.1.1")
 public class Splash {
     private static final Random rand = new Random();
+
+    private static final Pattern p = Pattern.compile("%(.)", Pattern.DOTALL);
 
     private class ModSplashes {
         public final List<String> splashes;
@@ -66,7 +70,25 @@ public class Splash {
         if (!splashes.isEmpty()) {
             ModSplashes splash = splashes.get(rand.nextInt(splashes.size()));
             String s = splash.splashes.get(rand.nextInt(splash.splashes.size()));
-            s = s.replace("%n", "\n").replace("%%", "%");
+            //s = s.replace("%n", "\n").replace("%%", "%");
+            Matcher m = p.matcher(s);
+            StringBuilder sb = new StringBuilder();
+            int last = 0;
+            while (m.find()) {
+                sb.append(s.substring(last, m.start()));
+                String s2;
+                switch(m.group(1).charAt(0)) {
+                    case 'n':
+                        s2 = "\n";
+                        break;
+                    default:
+                        s2 = m.group(1);
+                }
+                sb.append(s2);
+                last = m.end();
+            }
+            sb.append(s.substring(last));
+            s = sb.toString();
             for (String s1 : s.split("\n"))
                 if (!s1.isEmpty())
                     LogManager.getLogger(splash.modid).info(s1);
