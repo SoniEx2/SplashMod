@@ -1,1 +1,13 @@
+# This is a comment.
+
+# Empty lines are ignored.
+
+# To make a splash starting with a #, add a % before it, like so:
+%#SplashMod
+# (Shows up as "#SplashMod" on the log)
+
+# If the first line starts with #!, followed by a number n, followed by ":", followed by n characters,
+# it'll be treated as a logid flag. For usage example see BuildCraft|Core.txt
+# TODO: rewrite it to be more intuitive
+
 Made by SoniEx2!%nCaused by Cloudy!
