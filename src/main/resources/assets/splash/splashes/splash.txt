@@ -6,8 +6,10 @@
 %#SplashMod
 # (Shows up as "#SplashMod" on the log)
 
-# If the first line starts with #!, followed by a number n, followed by ":", followed by n characters,
-# it'll be treated as a logid flag. For usage example see BuildCraft|Core.txt
-# TODO: rewrite it to be more intuitive
+# If the first line starts with #!, it'll be treated as a logid flag.
+# For usage example see BuildCraft|Core.txt
 
-Made by SoniEx2!%nCaused by Cloudy!
+Made by SoniEx2!%nCaused by Cloudy!%%
+
+# "People like me" = genderqueer people
+People like me aren't welcome in the modding community, thanks to Lex: [2015-06-12T17:33:30-03:00] <@Lex_> I've read your rants about your sexuality, you're not a she.
